@@ -1,0 +1,147 @@
+/* Auth Page Container */
+.auth-container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(145deg, #6c63ff, #907cff);
+	padding: 20px;
+	animation: fadeIn 0.4s ease;
+}
+
+/* Auth Card */
+.auth-box {
+	background: #ffffff;
+	padding: 32px 36px;
+	border-radius: 16px;
+	width: 100%;
+	max-width: 380px;
+	text-align: center;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+	animation: slideUp 0.4s ease;
+}
+
+/* Titles */
+.auth-box h1 {
+	font-size: 28px;
+	font-weight: 800;
+	color: #6c63ff;
+	margin-bottom: 8px;
+}
+
+.auth-box h2 {
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+/* Input Fields */
+.auth-box input {
+	width: 100%;
+	padding: 12px 14px;
+	margin-bottom: 14px;
+	border-radius: 10px;
+	border: 1px solid #d6d6d6;
+	background: #f9f9ff;
+	transition: 0.25s ease;
+	font-size: 15px;
+}
+
+.auth-box input:focus {
+	border-color: #6c63ff;
+	box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+	outline: none;
+}
+
+/* Submit Button */
+.auth-box button[type="submit"] {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(135deg, #6c63ff, #827aff);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.25s ease;
+	margin-top: 8px;
+}
+
+.auth-box button[type="submit"]:hover:not(:disabled) {
+	background: linear-gradient(135deg, #594eff, #7066ff);
+	transform: translateY(-2px);
+}
+
+.auth-box button[type="submit"]:disabled {
+	background: #b6b2ff;
+	cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+	background: #ffe6e6;
+	color: #b20000;
+	padding: 10px 12px;
+	border-radius: 10px;
+	margin-bottom: 14px;
+	font-size: 14px;
+	border-left: 5px solid #ff4d4d;
+	animation: fadeIn 0.3s ease;
+}
+
+/* Switch Text */
+.switch-text {
+	margin-top: 18px;
+	font-size: 15px;
+	color: #555;
+}
+
+.switch-link {
+	background: none;
+	border: none;
+	color: #6c63ff;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 15px;
+	transition: 0.25s;
+}
+
+.switch-link:hover {
+	text-decoration: underline;
+	color: #4f48e6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	.auth-box {
+		padding: 28px 26px;
+	}
+	.auth-box h1 {
+		font-size: 24px;
+	}
+}

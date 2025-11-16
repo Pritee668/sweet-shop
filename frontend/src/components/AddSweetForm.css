@@ -1,0 +1,116 @@
+.add-sweet-form {
+	max-width: 450px;
+	margin: 30px auto;
+	padding: 26px 28px;
+	border-radius: 14px;
+	background: #ffffff;
+	box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	font-family: "Inter", "Segoe UI", sans-serif;
+	animation: fadeIn 0.3s ease;
+}
+
+/* Inputs */
+.add-sweet-form input,
+.add-sweet-form textarea {
+	width: 100%;
+	padding: 13px 14px;
+	font-size: 15px;
+	border: 1px solid #d7d7d7;
+	border-radius: 10px;
+	background: #f9f9ff;
+	transition: all 0.25s ease;
+}
+
+.add-sweet-form input:hover,
+.add-sweet-form textarea:hover {
+	background: #f1f1ff;
+}
+
+.add-sweet-form input:focus,
+.add-sweet-form textarea:focus {
+	border-color: #665cff;
+	background: #ffffff;
+	box-shadow: 0 0 0 4px rgba(102, 92, 255, 0.15);
+	outline: none;
+}
+
+/* Textarea */
+.add-sweet-form textarea {
+	min-height: 90px;
+	resize: vertical;
+	line-height: 1.45;
+}
+
+/* Error Message */
+.error-message {
+	background: #ffe2e2;
+	color: #a60000;
+	padding: 12px 14px;
+	border-radius: 8px;
+	font-size: 14px;
+	border-left: 4px solid #ff4d4d;
+	animation: slideIn 0.3s ease;
+}
+
+/* Button */
+.add-sweet-form button {
+	background: linear-gradient(135deg, #6c63ff, #827aff);
+	color: white;
+	border: none;
+	padding: 14px;
+	border-radius: 10px;
+	font-size: 17px;
+	cursor: pointer;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	transition: 0.25s ease;
+}
+
+.add-sweet-form button:hover {
+	background: linear-gradient(135deg, #5a51ff, #7068ff);
+	transform: translateY(-1px);
+}
+
+.add-sweet-form button:active {
+	transform: scale(0.98);
+}
+
+.add-sweet-form button:disabled {
+	background: #b9b5ff;
+	cursor: not-allowed;
+	transform: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Slide In Animation for errors */
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(-6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+	.add-sweet-form {
+		padding: 20px;
+	}
+}
